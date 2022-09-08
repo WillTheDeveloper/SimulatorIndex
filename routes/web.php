@@ -15,4 +15,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('home');
-});
+})->name('home');
+
+Route::get('/aircraft', [\App\Http\Controllers\Aircraft::class])->name('aircraft');
+
+Route::get('/weapons', [\App\Http\Controllers\Aircraft::class])->name('weapons');
